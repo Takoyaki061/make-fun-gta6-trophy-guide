@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Ledger — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+      <h1>Leonida Ledger</h1>
+      <p class="subtitle">The offline guide &amp; tracker for every GTA VI trophy — official names, descriptions and grades, a cited guide for each one, a roadmap to the platinum, and the one missable trophy flagged.</p>
+    </div>
+    <div class="progress-card" id="progressCard">
+      <p class="big-count"><span id="earnedCount">0</span><span class="of"> / 55 earned</span></p>
+      <div class="bar" role="progressbar" aria-label="Trophies earned"><div class="bar-fill" id="barFill"></div></div>
+      <p class="grade-line" id="gradeLine">1 platinum &middot; 2 gold &middot; 6 silver &middot; 46 bronze &middot; 28 hidden</p>
+      <p class="grade-line" id="earnedByGrade"></p>
+    </div>
+  </div>
+  <nav class="tabs" aria-label="Views">
+    <button type="button" data-view="checklist" class="tab active" id="tabChecklist">Checklist</button>
+    <button type="button" data-view="roadmap" class="tab" id="tabRoadmap">Roadmap to Platinum</button>
+    <button type="button" data-view="missables" class="tab" id="tabMissables">Missables &amp; Warnings</button>
+    <button type="button" data-view="about" class="tab" id="tabAbout">Sources &amp; Notes</button>
+  </nav>
+</header>
+
+<main>
+  <section id="viewChecklist" class="view">
+    <div class="controls" id="controls">
+      <label class="search">Search <input id="search" type="search" placeholder="Trophy name or keyword…" autocomplete="off"></label>
+      <label class="field">Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <fieldset class="kinds" id="kindFilters" aria-label="Filter by kind">
+        <legend>Kind</legend>
+      </fieldset>
+      <label class="check"><input id="spoilerToggle" type="checkbox" checked> Hide story spoilers</label>
+      <label class="check"><input id="earnedOnly" type="checkbox"> Earned only</label>
+      <button id="exportBtn" type="button">Export progress</button>
+      <label class="import">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+    </div>
+    <p class="result-line" id="resultLine"></p>
+    <div class="layout">
+      <div class="list-col">
+        <ul class="trophy-list" id="trophyList"></ul>
+      </div>
+      <aside class="detail-col" id="detailPane" aria-live="polite">
+        <p class="detail-empty">Select a trophy to read its guide and sources.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="viewRoadmap" class="view" hidden>
+    <h2>Roadmap to the platinum — <span class="platinum-name">Vice Got a Price!</span></h2>
+    <p class="lede">About 200 hours, difficulty 4/10, one playthrough, no online trophies. The order below is built from the official descriptions: story first, then the 100% checklist, then cleanup.</p>
+    <div id="roadmapBody"></div>
+  </section>
+
+  <section id="viewMissables" class="view" hidden>
+    <h2>Missables &amp; warnings</h2>
+    <p class="lede">Only one trophy can be missed. Everything else stays available in free-roam after the story — but there is no mission replay, so save discipline matters.</p>
+    <div id="missablesBody"></div>
+    <h3>Save rules that keep the platinum safe</h3>
+    <ul class="rules" id="saveRules"></ul>
+  </section>
+
+  <section id="viewAbout" class="view" hidden>
+    <h2>Sources &amp; notes</h2>
+    <div id="aboutBody"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Ledger — an unofficial, open-source fan guide. Not affiliated with Rockstar Games. Trophy names, descriptions and grades are shown as PlayStation publishes them; every guide is written in our own words and cites its sources. No network is used: this page works fully offline.</p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
